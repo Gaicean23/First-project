@@ -1,0 +1,10 @@
+node_modules/
+# IntellijIdea files
+.idea/
+.DS_Store
+
+#ignore logs folder
+logs/
+
+#ignore any txt-files by mask
+docs/*.txt
