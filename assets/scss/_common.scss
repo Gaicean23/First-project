@@ -32,7 +32,7 @@ h1 {
 }
 
 h2 {
-  // font-family: "Roboto Slab", serif;
+  font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 2.5rem;
   line-height: 1.2em;
@@ -62,6 +62,7 @@ h3 {
 
 p {
   color: $color-gray;
+  line-height: 1.313em;
 }
 
 input {
@@ -77,11 +78,8 @@ input {
 .btn-form,
 .btn-posts {
   display: block;
-  padding: 18px $gap;
   border: 2px solid $color-light;
   background-color: rgba(255, 255, 255, 0.1);
-  font-size: 1.125rem;
-  height: 60px;
   text-align: center;
   transition: background-color 0.5s;
   letter-spacing: 0.1em;
@@ -93,15 +91,47 @@ input {
 }
 
 .btn {
-  min-width: 250px;
   background-color: rgba(255, 255, 255, 0.1);
   border: 2px solid $color-light;
+
+  @include lg-min {
+    min-width: 250px;
+    height: 60px;
+    padding: 18px $gap;
+    font-size: 1.125rem;
+  }
+
+  @include lg-md {
+    min-width: 200px;
+    min-height: 50px;
+    padding: 14px $gap;
+    font-size: 1rem;
+  }
+  
+  @include md-sm {
+    min-width: 170px;
+    min-height: 40px;
+    padding: 9px $gap;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+  }
+
+  @include sm {
+    min-width: 170px;
+    min-height: 40px;
+    top: 9px;
+    bottom: 10px;
+    font-size: 1rem;
+  }
 }
 
 .btn-accent {
   background-color: rgba($color-primary, 0.8);
   border: 2px solid $color-primary;
   min-width: 350px;
+  height: 60px;
+  padding: 18px $gap;
+  font-size: 1.125rem;
 
   @include sm {
     min-width: auto;
@@ -124,4 +154,9 @@ input {
   min-width: 350px;
   border-color: $color-primary;
   background-color: rgba(45, 54, 81, 0.8);
+
+  @include sm {
+    min-width: auto;
+    width: 100%;
+  }
 }

@@ -88,6 +88,14 @@
     font-size: 1.25rem;
     letter-spacing: 0.1em;
     transition: color;
+
+    @include md-sm {
+      font-size: 1.125rem;
+    }
+    @include sm {
+      font-size: 1.125rem;
+    }
+
   }
   &:hover .skills-item__overlay {
     opacity: 0.95 !important;
