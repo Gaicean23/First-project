@@ -20,8 +20,7 @@
 
   &__input {
     color: rgb(255, 255, 255);
-    padding-left: 30px;
-    padding-right: 30px;
+    padding: 9px 30px 8px 30px;
     border-bottom-color: rgba(255, 255, 255, 0.25);
     background-color: rgba(255, 255, 255, 0.05);
     width: 100%;
@@ -38,7 +37,7 @@
     border-right: 2px solid transparent;
     transition: border-bottom, border-top, border-left, border-right 0.5s;
 
-    ::-webkit-input-placeholder {
+    &::-webkit-input-placeholder {
       color: $color-gray;
     }
 

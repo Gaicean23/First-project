@@ -1,14 +1,39 @@
 .info {
   letter-spacing: 0.055em;
   background-color: $color-gray-light;
-  padding-top: 100px;
-  padding-bottom: 100px;
+ 
 
+  @include lg-min {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  @include lg-md {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+
+  @include md-sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
   &__container {
     display: grid;
     grid-template-columns: 1fr 271px;
-    grid-gap: 100px;
     @extend %container;
+
+    @include lg-min {
+      grid-gap: 100px;
+    }
+
+    @include lg-md {
+      grid-gap: 40px;
+    }
+    
+    @include md-sm {
+      grid-gap: 20px;
+      grid-template-columns: 1fr 236px;
+    }
   }
 
   &__content {
@@ -19,6 +44,16 @@
     line-height: 1em;
     color: $color-gray;
     padding-bottom: 0;
+
+    p {
+      @include lg-md {
+        font-size: 1rem;
+      }
+
+      @include md-sm {
+        font-size: 1rem;
+      }
+    }
 
     p:first-of-type {
       position: relative;
@@ -32,7 +67,18 @@
       width: 2px;
       content: "";
       background-color: rgba(99, 117, 136, 0.1);
-      right: -50px;
+
+      @include lg-min {
+        right: -50px;
+      }
+
+      @include lg-md {
+        right: -20px;
+      }
+
+      @include md-sm {
+        right: -10px;
+      }
     }
 
     p:last-of-type {
@@ -44,11 +90,11 @@
     display: grid;
     align-content: center;
     justify-items: center;
+    padding-top: 1px;
 
     img {
       max-width: 100%;
       max-height: 480px;
-      border-style: none;
     }
   }
 }

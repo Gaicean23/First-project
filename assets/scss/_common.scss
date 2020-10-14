@@ -6,6 +6,7 @@ html {
   font-family: $font-main;
   font-size: $font-size;
   color: $color-gray;
+  line-height: 1.15;
 }
 
 h1 {
@@ -34,7 +35,6 @@ h1 {
 h2 {
   font-family: "Roboto Slab", serif;
   font-weight: 700;
-  font-size: 2.5rem;
   line-height: 1.2em;
   color: $color-primary;
   letter-spacing: 0.1em;
@@ -43,7 +43,22 @@ h2 {
 .info h2,
 .posts h2 {
   margin-top: 0;
-  margin-bottom: 56px;
+  
+
+  @include lg-min {
+    font-size: 2.5rem;
+    margin-bottom: 56px;
+  }
+
+  @include lg-md {
+    font-size: 2rem;
+    margin-bottom: 42px;
+  }
+  
+  @include md-sm {
+    font-size: 1.5rem;
+    margin-bottom: 28px;
+  }
 }
 
 a {
@@ -52,17 +67,16 @@ a {
 }
 
 h3 {
-  // font-family: "Roboto Slab", serif;
   font-weight: 700;
   font-size: 1.125rem;
-  line-height: 21px;
+  // line-height: 21px;
   color: $color-gray;
   letter-spacing: 0.05em;
 }
 
 p {
   color: $color-gray;
-  line-height: 1.313em;
+  line-height: 1.15;
 }
 
 input {
@@ -144,6 +158,7 @@ input {
   border-bottom-color: $color-gray;
   transition: border 0.5s;
   color: $color-light;
+  font-size: 1.125rem;
 }
 
 .btn-form:hover {
@@ -152,8 +167,11 @@ input {
 
 .btn-posts {
   min-width: 350px;
+  height: 60px;
   border-color: $color-primary;
   background-color: rgba(45, 54, 81, 0.8);
+  padding: 18px $gap;
+  font-size: 1.125rem;
 
   @include sm {
     min-width: auto;
