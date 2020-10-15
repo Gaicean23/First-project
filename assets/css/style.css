@@ -569,9 +569,9 @@ input {
   height: 60px;
   border: 2px solid transparent;
   border-bottom-color: #637588;
-  -webkit-transition: border background-color 0.5s;
-  -o-transition: border background-color 0.5s;
-  transition: border background-color 0.5s;
+  -webkit-transition: border, background-color 0.5s;
+  -o-transition: border, background-color 0.5s;
+  transition: border, background-color 0.5s;
   color: #ffffff;
   font-size: 1.125rem;
 }

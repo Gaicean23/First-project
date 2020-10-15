@@ -164,7 +164,7 @@ input {
   height: 60px;
   border: 2px solid transparent;
   border-bottom-color: $color-gray;
-  transition: border background-color 0.5s;
+  transition: border, background-color 0.5s;
   color: $color-light;
   font-size: 1.125rem;
 }
