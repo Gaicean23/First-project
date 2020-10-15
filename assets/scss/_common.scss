@@ -28,7 +28,7 @@ h1 {
   }
 
   @include sm {
-    font-size: 1.25rem;
+    font-size: 1.875rem;
   }
 }
 
@@ -43,7 +43,6 @@ h2 {
 .info h2,
 .posts h2 {
   margin-top: 0;
-  
 
   @include lg-min {
     font-size: 2.5rem;
@@ -54,10 +53,16 @@ h2 {
     font-size: 2rem;
     margin-bottom: 42px;
   }
-  
+
   @include md-sm {
     font-size: 1.5rem;
-    margin-bottom: 28px;
+    margin-bottom: 36px;
+  }
+
+  @include sm {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 36px;
   }
 }
 
@@ -84,7 +89,7 @@ input {
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 21px;
-  color: #9195a3;
+  // color: #9195a3;
 }
 
 .btn,
@@ -121,7 +126,7 @@ input {
     padding: 14px $gap;
     font-size: 1rem;
   }
-  
+
   @include md-sm {
     min-width: 170px;
     min-height: 40px;
@@ -133,9 +138,10 @@ input {
   @include sm {
     min-width: 170px;
     min-height: 40px;
-    top: 9px;
-    bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 8px; 
     font-size: 1rem;
+    letter-spacing: 0.05em;
   }
 }
 
@@ -154,9 +160,11 @@ input {
 }
 
 .btn-form {
+  width: 100%;
+  height: 60px;
   border: 2px solid transparent;
   border-bottom-color: $color-gray;
-  transition: border 0.5s;
+  transition: border background-color 0.5s;
   color: $color-light;
   font-size: 1.125rem;
 }

@@ -1,13 +1,12 @@
 .info {
   letter-spacing: 0.055em;
   background-color: $color-gray-light;
- 
 
   @include lg-min {
     padding-top: 100px;
     padding-bottom: 100px;
   }
-  
+
   @include lg-md {
     padding-top: 80px;
     padding-bottom: 80px;
@@ -17,22 +16,35 @@
     padding-top: 60px;
     padding-bottom: 60px;
   }
+
+  @include sm {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
   &__container {
     display: grid;
-    grid-template-columns: 1fr 271px;
+
     @extend %container;
 
     @include lg-min {
       grid-gap: 100px;
+      grid-template-columns: 1fr 271px;
     }
 
     @include lg-md {
       grid-gap: 40px;
+      grid-template-columns: 1fr 271px;
     }
-    
+
     @include md-sm {
       grid-gap: 20px;
       grid-template-columns: 1fr 236px;
+    }
+
+    @include sm {
+      grid-gap: 20px;
+      grid-template-columns: 1fr;
     }
   }
 
@@ -51,6 +63,10 @@
       }
 
       @include md-sm {
+        font-size: 1rem;
+      }
+
+      @include sm {
         font-size: 1rem;
       }
     }
@@ -78,6 +94,10 @@
 
       @include md-sm {
         right: -10px;
+      }
+
+      @include sm {
+        display: none;
       }
     }
 
